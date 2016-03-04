@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<!--App css-->
+			<link href="css/app.css" rel="stylesheet" />
+		
+		<!--Fontawesome-->
+			<link href="css/font-awesome.min.css"  rel="stylesheet" />
+		
+		<!--Angular lib-->
+			<script src="script/shared/angular.min.js"></script>
+		
+		<!--Angular Modules-->
+			<script src="script/app.js"></script>
+		
+		<!--Angular Controllers-->
+			<script src="script/controller/main_controller.js"></script>
+		
+		<!--Angular Directives-->
+			<script src="script/directive/directive.js"></script>
+	</head>
+	<body ng-app="myApp">
+		<div class = "main_containner" ng-controller="MainController">
+			<div class="main">
+				<div class="header">
+					<p>My shop list</p>
+				</div>
+				<div class="container">
+					<div class="item" ng-repeat="item in shoplist">
+						<p>{{item}}</p>
+						<div id="remove" ng-click="removeItem($index)">
+							<i class="fa fa-times"></i>
+						</div>
+					</div>
+				<div class="footer">
+					<input ng-model="newItem"  ng-enter="addItem()"></input>
+					<div id="btnAdd" ng-click="addItem()">Add</div>
+				<div>
+			</div>
+		</div>
+	</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<!--App css-->
+			<link href="css/app.css" rel="stylesheet" />
+		
+		<!--Fontawesome-->
+			<link href="css/font-awesome.min.css"  rel="stylesheet" />
+			
+		<!--Google Fonts-->
+			<link href='https://fonts.googleapis.com/css?family=ABeeZee' rel='stylesheet' type='text/css'>
+		
+		<!--Angular lib-->
+			<script src="script/shared/angular.min.js"></script>
+		
+		<!--Angular Modules-->
+			<script src="script/app.js"></script>
+		
+		<!--Angular Controllers-->
+			<script src="script/controller/main_controller.js"></script>
+		
+		<!--Angular Directives-->
+			<script src="script/directive/directive.js"></script>
+	</head>
+	<body ng-app="myApp">
+		<div ng-controller="MainController">
+			<div class="friendlist">
+				<div class="header">
+					<p>My friends</p>
+				</div>
+				<div class="container">
+					<div class="friend" ng-repeat="friend in friendlist | filter: key_word">
+						<img ng-src="{{friend.avatar}}"></img>
+						<a href="">{{friend.fullname}}</a>
+						<p><i class="fa fa-anchor"></i> {{friend.location}}</p>
+					</div>
+				</div>
+				<div class="footer">
+					<input type="text" ng-model="key_word"></input>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>
