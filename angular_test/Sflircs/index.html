@@ -1,0 +1,135 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Sflircs</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!--Favicon-->
+	<link rel="icon" type="image/png" href="./images/sflircs.png" />
+	  
+	<!--Boostrap CSS-->
+	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+	
+	<!--jQuery-->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+	
+	<!--Boostrap Min JS-->
+	<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+	
+	<!--Fontawesome-->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+
+	<!--Google Fonts-->
+    <link href='https://fonts.googleapis.com/css?family=Raleway:400,200,300,500,600' rel='stylesheet' type='text/css'>
+	
+	<!--Page CSS-->
+    <link href='./styles/home.css' rel='stylesheet'>
+	
+	<!--Script-->
+	<script src="./scripts/app_workflow.js"></script>
+</head>
+<body>
+	<!--Left side-->
+	<div>
+		<div class="col-md-2  col-xs-12 left-side nopadding">
+		
+			<!--Header of .left-site-->
+			<div class= "header nopadding">
+				<div class="top">
+					<img src="./images/lengocminh.jpg"></img>
+				</div>
+				<div class="bottom">
+					<a class="username" href="">Sunchelsea</a>
+					<div class="location">
+						<i class="fa fa-map-marker"></i>
+						<p>Ha Noi, VN</p>
+					</div>
+				</div>
+			</div>
+			
+			<!--Body of .left-site-->
+			<div class= "body">
+				<ul>	
+					<li>
+						<i class="fa fa-newspaper-o"></i>
+						<a href="">News</a>
+					</li>
+					<li>
+						<i class="fa fa-list-alt"></i>
+						<a href="">What's Next</a>
+					</li>
+					<li>
+						<i class="fa fa-briefcase"></i>
+						<a href="">Workspaces</a>
+					</li>
+					<li>
+						<i class="fa fa-hdd-o"></i>
+						<a href="">Data storage</a>
+					</li>
+				</ul>
+				<div class="share">
+					<div class="icon-share">
+						<i class="fa fa-facebook round-square"></i>
+						<i class="fa fa-instagram round-square"></i>
+						<i class="fa fa-youtube-play round-square"></i>
+						<i class="fa fa-amazon round-square"></i>
+						<i class="fa fa-pinterest round-square"></i>
+					</div>
+				</div>
+			</div>
+			
+			<!--Footer of .left-site-->
+			<div class= "footer">
+				<div class="top">
+					<div id="signout">
+						<i class="fa fa-power-off"></i>
+						<a href="">Sign out</a>
+					</div>
+				</div>
+				<div class="bottom">
+					<div class="ifooter1">
+					</div>
+					<div class="ifooter2">
+					</div>
+					<div class="ifooter3">
+					</div>
+					<div class="ifooter4">
+					</div>
+					<div class="ifooter5">
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	
+	<!--Left side-->
+	<div class="col-md-10 col-xs-12 right-side nopadding">
+		<div class="header">
+		</div>
+		<div class="body">
+		</div>
+		<div class="footer">
+		</div>
+	</div>
+	
+	
+	
+	<script>
+		$(document).ready(function(){
+			window.addEventListener("resize", function(){
+				console.log($(window).width());
+				if($(window).width() < 1200){
+					$(".left-side").hide();
+					$(".right-side").removeClass("col-md-10").addClass("col-md-12");
+				} 
+				else{
+					$(".left-side").show();
+					$(".right-side").removeClass("col-md-12").addClass("col-md-10");
+				}
+			});
+		});
+	</script>
+	
+</body>
+</html>
