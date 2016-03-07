@@ -1,0 +1,28 @@
+.right-side {
+	background: blue;
+	min-height: 657px;
+	height: 100%;
+}
+
+.right-side .header{
+	height: 37px;
+	background: black;
+}
+
+.right-side .body{
+	height: 110px;
+	background: white;
+}
+
+.right-side .footer{
+	min-height: 517px;
+	/* Firefox */
+	height: -moz-calc(100% - 147px);
+	/* WebKit */
+	height: -webkit-calc(100% - 147px);
+	/* Opera */
+	height: -o-calc(100% - 147px);
+	/* Standard */
+	height: calc(100% - 147px);
+	background: pink;
+}

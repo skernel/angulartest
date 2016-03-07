@@ -1,0 +1,76 @@
+
+body{
+	min-height: 657px;
+	height: 100vh;
+}
+
+.nopadding{
+	box-sizing: border-box;
+	padding: 0;
+}
+
+.left-side {
+	background: green;
+	min-height: 657px;
+	height: 100%;
+}
+
+.left-side .header{
+	height: 227px;
+	background: black;
+}
+
+.left-side .body{
+	min-height: 350px;
+	/* Firefox */
+	height: -moz-calc(100% - 307px);
+	/* WebKit */
+	height: -webkit-calc(100% - 307px);
+	/* Opera */
+	height: -o-calc(100% - 307px);
+	/* Standard */
+	height: calc(100% - 307px);
+	background: white;
+}
+
+.left-side .footer{
+	height: 80px;
+	background: pink;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
